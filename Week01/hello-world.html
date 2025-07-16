@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        #hello-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        #hello-text:hover {
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hello-text">Hello World</h1>
+    
+    <script>
+        const helloText = document.getElementById('hello-text');
+        
+        helloText.addEventListener('mouseenter', function() {
+            this.style.color = '#ff6b6b';
+        });
+        
+        helloText.addEventListener('mouseleave', function() {
+            this.style.color = '#333';
+        });
+    </script>
+</body>
+</html>
