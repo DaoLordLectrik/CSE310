@@ -45,7 +45,7 @@ As a foundational project in web development, this serves as my introduction to:
 ## File Structure
 
 ```
-hello-world/
+Week01/
 ├── index.html          # Main HTML file containing all code
 └── README.md           # This file
 ```
