@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghana Recreation Map - Discover Amazing Places</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🇬🇭 Ghana Recreation Map</h1>
+                <p class="subtitle">Discover Ghana's Most Amazing Recreational Destinations</p>
+            </div>
+        </header>
+
+        <!-- Filter Controls -->
+        <div class="controls-panel">
+            <div class="filter-section">
+                <h3>🔍 Filter Locations</h3>
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="beach">Beaches</option>
+                            <option value="park">National Parks</option>
+                            <option value="historical">Historical Sites</option>
+                            <option value="cultural">Cultural Sites</option>
+                            <option value="nature">Nature Reserves</option>
+                            <option value="entertainment">Entertainment</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="regionFilter">Region:</label>
+                        <select id="regionFilter" class="filter-select">
+                            <option value="all">All Regions</option>
+                            <option value="greater-accra">Greater Accra</option>
+                            <option value="central">Central Region</option>
+                            <option value="western">Western Region</option>
+                            <option value="ashanti">Ashanti Region</option>
+                            <option value="northern">Northern Region</option>
+                            <option value="eastern">Eastern Region</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="ratingFilter">Minimum Rating:</label>
+                        <select id="ratingFilter" class="filter-select">
+                            <option value="0">Any Rating</option>
+                            <option value="3">3+ Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="4.5">4.5+ Stars</option>
+                        </select>
+                    </div>
+                    
+                    <button id="clearFilters" class="clear-btn">Clear Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="map-container">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading Ghana's recreational locations...</p>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <!-- Statistics Panel -->
+        <div class="stats-panel">
+            <h3>📊 Quick Stats</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalLocations">0</span>
+                    <span class="stat-label">Total Locations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="visibleLocations">0</span>
+                    <span class="stat-label">Visible on Map</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="avgRating">0</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="topCategory">-</span>
+                    <span class="stat-label">Popular Category</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Details Modal -->
+        <div id="locationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalContent">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Ghana Recreation Map. Explore responsibly and preserve our beautiful heritage.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/data.js"></script>
+    <script src="scripts/maps.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/ui.js"></script>
+    
+    <!-- Google Maps API -->
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrX5GBCjwb5-KxBgj-iaNQZ7SdqvikE7E&callback=initMap&libraries=places">
+    </script>
+</body>
+</html>
